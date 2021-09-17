@@ -1,1 +1,1 @@
-# of_mice_and_men
+# Of Mice and Men
