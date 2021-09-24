@@ -23,13 +23,13 @@ numberofattempts = 0
 gameloop = True
 
 while gameloop == True:
-
+    print (randomnumber)
     userinput = input ("Type in what you think the 4-digit number is: ")
     if userinput == "STOP":
         print (f"The random number is {randomnumber}")
         exit()
-    userinput = int(userinput)
-    if userinput == randomnumber:
+        #userinput = int(userinput)
+    if int(userinput) == randomnumber:
         numberofattempts = numberofattempts+1
         gameloop = False
     else:
@@ -37,11 +37,14 @@ while gameloop == True:
         numberofmice = 0
         position = 0
         for number in str(userinput ):
-            if number in str(randomnumber):
-                if number == str(randomnumber)[position]:
-                    numberofmice = numberofmice+1
-                else:
-                    numberofmen = numberofmen+1
+            print (number)
+            
+            if number == str(randomnumber)[position]:
+                numberofmice = numberofmice+1
+            else:
+                if number in str(randomnumber):
+                    ##Work out how random number equals 9955, guess = 5055, answer = 1 men and 2 mice
+                        numberofmen = numberofmen+1
             position = position+1
         print (f"You have {numberofmen} men and {numberofmice} mice.")
         numberofattempts = numberofattempts+1
